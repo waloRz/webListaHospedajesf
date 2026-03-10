@@ -95,10 +95,11 @@ export default function HospedajeCard({ hospedaje, variant = 'default' }) {
     destacado,
   } = hospedaje
 
-  // Datos derivados
-  const catInfo          = CATEGORIAS[categoria] ?? { emoji: '🏠', label: categoria }
-  const gradiente        = GRADIENTES_PLACEHOLDER[categoria] ?? 'from-yunga-700 to-tierra-600'
-  const emojiPH          = EMOJIS_PLACEHOLDER[categoria]     ?? '🏡'
+  // Datos derivados — categoria es array, usamos el primero para el gradiente/placeholder
+  const categoriaArray   = Array.isArray(categoria) ? categoria : [categoria]
+  const catInfoArray     = categoriaArray.map(c => CATEGORIAS[c] ?? { emoji: '🏠', label: c })
+  const gradiente        = GRADIENTES_PLACEHOLDER[categoriaArray[0]] ?? 'from-yunga-700 to-tierra-600'
+  const emojiPH          = EMOJIS_PLACEHOLDER[categoriaArray[0]]     ?? '🏡'
   const precioFormateado = formatPrecio(precio_desde, moneda)
   const serviciosShow    = servicios.slice(0, 4)   // Máximo 4 tags visibles
   const serviciosExtra   = servicios.length - 4    // Cantidad de extras para badge "+N"
@@ -166,10 +167,14 @@ export default function HospedajeCard({ hospedaje, variant = 'default' }) {
             bg-noche/70 backdrop-blur text-barro-400 text-xs font-bold
             uppercase tracking-wider px-3 py-1 rounded-full
         ── */}
-        <span className="badge-categoria absolute top-3 left-3 z-10">
-          <span className="mr-1">{catInfo.emoji}</span>
-          {catInfo.label}
-        </span>
+        <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-1">
+          {catInfoArray.map((cat, i) => (
+            <span key={i} className="badge-categoria">
+              <span className="mr-1">{cat.emoji}</span>
+              {cat.label}
+            </span>
+          ))}
+        </div>
 
         {/* ── A.5 BADGE DESTACADO — esquina superior DERECHA ───────────────
             Solo aparece si destacado === true en el JSON.

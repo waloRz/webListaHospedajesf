@@ -42,8 +42,8 @@ import { ExternalLink, MapPin, AlertTriangle } from 'lucide-react'
 import { googleMapsUrl } from '../../utils/formatters'
 
 // Coordenadas del centro de San Francisco, Jujuy
-const SF_CENTER = { lat: -23.621640, lng: -64.949483 }
-const ZOOM_DEFAULT = 16
+const SF_CENTER = { lat: -23.621969, lng: -64.949715 }  // Centro San Francisco, Valle Grande
+const ZOOM_DEFAULT = 19.5                                    // Decimal posible con zoomSnap: 0.5
 
 export default function MapaHospedaje({
   hospedaje,
@@ -95,8 +95,10 @@ export default function MapaHospedaje({
 
         // ── Crear el mapa ──────────────────────────────────────────────────
         mapInstance = L.map(mapaRef.current, {
-          center:          [lat, lng],
-          zoom:            ZOOM_DEFAULT,
+          center:    [lat, lng],
+          zoom:      ZOOM_DEFAULT,
+          zoomSnap:  0.1,   // permite zoom decimal: 14, 14.5, 15, 15.5...
+          zoomDelta: 0.25,   // cada click en +/- salta 0.5 niveles
           zoomControl:     false,      // lo reubicamos abajo a la derecha
           attributionControl: true,
         })

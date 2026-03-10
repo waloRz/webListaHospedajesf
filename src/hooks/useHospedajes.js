@@ -38,13 +38,14 @@ export function useHospedajes() {
         const q = filtros.busqueda.toLowerCase().trim()
         const enNombre      = h.nombre.toLowerCase().includes(q)
         const enDescripcion = h.descripcion.toLowerCase().includes(q)
-        const enCategoria   = h.categoria.toLowerCase().includes(q)
+        const enCategoria   = h.categoria.some(c => c.toLowerCase().includes(q))
         if (!enNombre && !enDescripcion && !enCategoria) return false
       }
 
       // 2. CATEGORÍA — OR: si hay seleccionadas, el hospedaje debe estar en alguna
       if (filtros.categoria.length > 0) {
-        if (!filtros.categoria.includes(h.categoria)) return false
+        const tieneCategoria = h.categoria.some(c => filtros.categoria.includes(c))
+        if (!tieneCategoria) return false
       }
 
       // 3. SERVICIOS — AND: el hospedaje debe tener TODOS los servicios marcados
@@ -102,7 +103,9 @@ export function useHospedajes() {
    */
   const contarPorCategoria = useMemo(() => {
     return ACTIVOS.reduce((acc, h) => {
-      acc[h.categoria] = (acc[h.categoria] ?? 0) + 1
+      h.categoria.forEach(c => {
+        acc[c] = (acc[c] ?? 0) + 1
+      })
       return acc
     }, {})
   }, [])

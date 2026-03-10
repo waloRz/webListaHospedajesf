@@ -15,20 +15,22 @@ const hospedajes = [
     direccion: "Ruta Provincial 83 Km 12, San Francisco, Valle Grande, Jujuy",
     coordenadas: {
       lat: -23.621722,
-      lng:  -64.952003,
-
-
+      lng:  -64.952003
     },
     capacidad: 20,
     precio_desde: 18000,
     moneda: "ARS",
     servicios: [
       "wifi",
+      "cama_matrimonial",
+      "agua caliente",
       "estacionamiento",
-      "desayuno",      
-      "quincho",        
+      "desayuno",
+      "baño_privado",
+      "calefaccion",
+      "ventilador"
     ],
-    categorias_turismo: ["naturaleza", "familia", "descanso"],
+   // categorias_turismo: ["naturaleza", "familia", "descanso"],
     imagenes: [
       "/img/001/foto1.jpg",
       "/img/001/foto2.jpg",
@@ -39,9 +41,10 @@ const hospedajes = [
     color_placeholder: "from-selva-700 to-tierra-700",
     activo: true,
   },
+
   {
     id: "002",
-    nombre: "Complejo Cabañas Río Bermejo",
+    nombre: "cabañas Luana",
     categoria: "cabaña",
     descripcion:
       "Complejo de cabañas equipadas rodeadas de vegetación subtropical, a metros del Río Bermejo. Cada cabaña cuenta con cocina, baño privado, galería con hamacas y parrilla individual. Perfecto para grupos, familias o parejas que quieren privacidad y contacto directo con la naturaleza.",

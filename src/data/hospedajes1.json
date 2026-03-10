@@ -2,81 +2,46 @@
   {
     "id": "001",
     "nombre": "Hostería El Nogal",
-    "categoria": [
-      "hostería","b&b"
-    ],
+    "categoria": "hostería", 
     "descripcion": "Tranquilo, establecimiento rodeado de arboles en San Francisco. Hospedaje con amplio comedor y habitaciones ideal para familias y parejas que buscan descanso en plena naturaleza de la Yunga jujeña. El sonido del los pájaros de las yungas son parte de la experiencia.",
     "descripcion_corta": "Rodeada de nubes en lo alto de San Francisco.",
-    "telefono": "+54 388 400-0001",
-    "whatsapp": "5438840000001",
+    "telefono": "+54 3886-526496",
+    "whatsapp": "54 3886-526496",
     "direccion": "Ruta Provincial 83 Km 42, San Francisco, Valle Grande, Jujuy",
-    "coordenadas": {
-      "lat": -23.621722,
-      "lng": -64.952003
-    },
+    "coordenadas": { "lat": -23.621722, "lng":  -64.952003 },
     "capacidad": 16,
     "precio_desde": 18000,
     "moneda": "ARS",
-    "servicios": [
-       "wifi",
+    "servicios": [   "wifi",
       "cama_matrimonial",
       "agua caliente",
       "estacionamiento",
       "desayuno",
       "banos_privados",
       "calefaccion",
-      "ventilador"
-    ],
-    "categorias_turismo": [
-      "naturaleza",
-      "familia",
-      "romantico"
-    ],
-    "imagenes": [
-      "/img/001/foto1.jpg",
-      "/img/001/foto2.jpg",
-      "/img/001/foto3.jpg"
-    ],
+      "ventilador"],
+    "categorias_turismo": ["naturaleza", "familia", "romantico"],
+    "imagenes": ["/img/001/foto1.jpg", "/img/001/foto2.jpg", "/img/001/foto3.jpg"],
     "imagen_portada": "/img/001/portada.jpg",
     "activo": true,
     "destacado": true
   },
   {
     "id": "002",
-    "nombre": "Complejo Cabañas Luana",
-    "categoria": [
-      "cabaña"
-    ],
+    "nombre": "Complejo Luana",
+    "categoria": "cabaña",
     "descripcion": "Complejo de 6 cabañas de madera nativa, cada una con galería privada con vista al bosque. A 300 metros del Río Bermejo, con acceso directo para pesca y natación. Las cabañas tienen capacidad para 4 a 6 personas, equipadas con cocina completa y parrilla individual.",
     "descripcion_corta": "Cabañas de madera nativa con galería y acceso directo al río.",
-    "telefono": "+54 388 400-0002",
-    "whatsapp": "5438840000002",
-    "direccion": "Camino al Río Bermejo S/N, San Francisco, Valle Grande, Jujuy",
-    "coordenadas": {
-      "lat": -23.623915,
-      "lng": -64.953720
-    },
+    "telefono": "+54 3886 59-8800",
+    "whatsapp": "54 3886 59-8800",
+    "direccion": "calle s/n, San Francisco, Valle Grande, Jujuy",
+    "coordenadas": { "lat": -23.623915, "lng": -64.953720 }, 
     "capacidad": 30,
     "precio_desde": 25000,
     "moneda": "ARS",
-    "servicios": [
-      "cochera",
-      "quincho",
-      "cocina_equipada",
-      "admite_mascotas"
-    ],
-    "categorias_turismo": [
-      "aventura",
-      "familia",
-      "pesca",
-      "naturaleza"
-    ],
-    "imagenes": [
-      "/img/002/foto1.jpg",
-      "/img/002/foto2.jpg",
-      "/img/002/foto3.jpg",
-      "/img/002/foto4.jpg"
-    ],
+    "servicios": ["estacionamiento", "quincho", "parrilla", "acceso_rio", "cocina_equipada", "admite_mascotas"],
+    "categorias_turismo": ["aventura", "familia", "pesca", "naturaleza"],
+    "imagenes": ["/img/002/foto1.jpg", "/img/002/foto2.jpg", "/img/002/foto3.jpg", "/img/002/foto4.jpg"],
     "imagen_portada": "/img/002/portada.jpg",
     "activo": true,
     "destacado": true
@@ -84,38 +49,19 @@
   {
     "id": "003",
     "nombre": "Camping La Yunga",
-    "categoria": [
-      "camping"
-    ],
+    "categoria": "camping",
     "descripcion": "Camping natural en el corazón de la Yunga jujeña. Parcelas sombreadas bajo una selva exuberante, con instalaciones sanitarias completas, agua caliente y fogones individuales. Ideal para trekkers, ciclistas y amantes del turismo de aventura. El camping cuenta con guías locales disponibles para excursiones.",
     "descripcion_corta": "Parcelas en plena selva de Yunga con sanitarios completos y fogones.",
     "telefono": "+54 388 400-0003",
     "whatsapp": "5438840000003",
     "direccion": "Zona Sur, Acceso por Ruta Prov. 83, San Francisco, Jujuy",
-    "coordenadas": {
-      "lat": -23.96,
-      "lng": -65.078
-    },
+    "coordenadas": { "lat": -23.9600, "lng": -65.0780 },
     "capacidad": 50,
     "precio_desde": 3500,
     "moneda": "ARS",
-    "servicios": [
-      "banos_privados",
-      "agua_caliente",
-      "fogon",
-      "admite_mascotas",
-      "cochera"
-    ],
-    "categorias_turismo": [
-      "aventura",
-      "trekking",
-      "naturaleza",
-      "mochilero"
-    ],
-    "imagenes": [
-      "/img/003/foto1.jpg",
-      "/img/003/foto2.jpg"
-    ],
+    "servicios": ["sanitarios", "agua_caliente", "fogon", "admite_mascotas", "guias_locales", "estacionamiento"],
+    "categorias_turismo": ["aventura", "trekking", "naturaleza", "mochilero"],
+    "imagenes": ["/img/003/foto1.jpg", "/img/003/foto2.jpg"],
     "imagen_portada": "/img/003/portada.jpg",
     "activo": true,
     "destacado": false
