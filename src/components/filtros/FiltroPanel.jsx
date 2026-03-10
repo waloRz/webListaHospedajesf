@@ -39,31 +39,35 @@
 import { useRef, useEffect } from 'react'
 import {
   X, Search, SlidersHorizontal,
-  Wifi, Car, Coffee, PawPrint, Flame,
-  Waves, Snowflake, Utensils, ChevronDown,
+  Wifi, Coffee, PawPrint, Flame,
+  Utensils, ShowerHead, Thermometer, Car, Bed, Wind,
 } from 'lucide-react'
 import {
   CATEGORIAS,
   SERVICIOS,
-  CATEGORIAS_TURISMO,
 } from '../../utils/serviciosConfig'
 
-// ── Íconos lucide para cada servicio (subset de los que muestra el filtro) ──
+// ── Íconos lucide para cada servicio del filtro ──────────────────────────────
 const ICONO_FILTRO = {
-  wifi:               <Wifi        size={14} strokeWidth={2} />,
-  desayuno:           <Coffee      size={14} strokeWidth={2} />,
-  estacionamiento:    <Car         size={14} strokeWidth={2} />,
-  admite_mascotas:    <PawPrint    size={14} strokeWidth={2} />,
-  quincho:            <Flame       size={14} strokeWidth={2} />,
-  pileta:             <Waves       size={14} strokeWidth={2} />,
-  aire_acondicionado: <Snowflake   size={14} strokeWidth={2} />,
-  cocina_equipada:    <Utensils    size={14} strokeWidth={2} />,
+  wifi:             <Wifi        size={14} strokeWidth={2} />,
+  desayuno:         <Coffee      size={14} strokeWidth={2} />,
+  admite_mascotas:  <PawPrint    size={14} strokeWidth={2} />,
+  cocina_equipada:  <Utensils    size={14} strokeWidth={2} />,
+  banos_privados:   <ShowerHead  size={14} strokeWidth={2} />,
+  calefaccion:      <Thermometer size={14} strokeWidth={2} />,
+  fogon:            <Flame       size={14} strokeWidth={2} />,
+  agua_caliente:    <Thermometer size={14} strokeWidth={2} />,
+  cochera:          <Car         size={14} strokeWidth={2} />,
+  quincho:          <Flame       size={14} strokeWidth={2} />,
+  cama_matrimonial: <Bed         size={14} strokeWidth={2} />,
+  ventilador:       <Wind        size={14} strokeWidth={2} />,
 }
 
-// Servicios que muestra el filtro (los 8 más relevantes para turismo)
+// Los 12 servicios del filtro en orden
 const SERVICIOS_FILTRO = [
-  'wifi', 'desayuno', 'estacionamiento', 'admite_mascotas',
-  'quincho', 'pileta', 'aire_acondicionado', 'cocina_equipada',
+  'wifi', 'desayuno', 'admite_mascotas', 'cocina_equipada',
+  'banos_privados', 'calefaccion', 'fogon', 'agua_caliente',
+  'cochera', 'quincho', 'cama_matrimonial', 'ventilador',
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -304,35 +308,6 @@ export default function FiltroPanel({
             </div>
           </div>
 
-          {/* ════════════════════════════════════════════════════════════════
-              SECCIÓN 5 — FILTRO POR TIPO DE TURISMO
-              ──────────────────────────────────────────────────────────────
-              Lógica OR: muestra si el hospedaje pertenece a AL MENOS UNO
-              de los tipos de turismo seleccionados.
-              Grid de 2 columnas para aprovechar el espacio horizontal.
-          ════════════════════════════════════════════════════════════════ */}
-          <div>
-            <SectionLabel
-              hint="Muestra si coincide con alguno de los seleccionados"
-            >
-              Tipo de turismo
-            </SectionLabel>
-            <div className="grid grid-cols-2 gap-1.5">
-              {Object.entries(CATEGORIAS_TURISMO).map(([key, val]) => {
-                const activo = filtros.turismo.includes(key)
-                return (
-                  <CheckboxItem
-                    key={key}
-                    activo={activo}
-                    onClick={() => toggleFiltro('turismo', key)}
-                    icono={<span className="text-base leading-none">{val.emoji}</span>}
-                    label={val.label}
-                    compact
-                  />
-                )
-              })}
-            </div>
-          </div>
 
         </div>
         {/* ── FIN del cuerpo scrollable ──────────────────────────────────── */}

@@ -44,11 +44,11 @@
 import { Link, useParams } from 'react-router-dom'
 import {
   ArrowLeft, MapPin, Phone, MessageCircle, Navigation,
-  Wifi, Car, Coffee, PawPrint, Flame, Waves, Snowflake,
-  Utensils, ShowerHead, Thermometer, Compass, Beef, CheckCircle2,
+  Wifi, Car, Coffee, PawPrint, Flame,
+  Utensils, ShowerHead, Thermometer, Bed, Wind, CheckCircle2,
 } from 'lucide-react'
 import { useHospedajes }                            from '../hooks/useHospedajes'
-import { SERVICIOS, CATEGORIAS, CATEGORIAS_TURISMO } from '../utils/serviciosConfig'
+import { SERVICIOS, CATEGORIAS } from '../utils/serviciosConfig'
 import { whatsappUrl, googleMapsUrl, formatPrecio }  from '../utils/formatters'
 import GaleriaImagenes  from '../components/galeria/GaleriaImagenes'
 import SEOHead          from '../seo/SEOHead'
@@ -57,22 +57,19 @@ import { SITE_URL }     from '../seo/seoConfig'
 import MapaHospedaje    from '../components/mapa/MapaHospedaje'
 
 // ── Mapa ícono lucide → clave de servicio ────────────────────────────────────
-// size=18 para la grilla de servicios; el color lo aplica el wrapper (.text-yunga-500)
 const ICONOS_SERVICIO = {
-  wifi:               <Wifi        size={18} strokeWidth={2} />,
-  desayuno:           <Coffee      size={18} strokeWidth={2} />,
-  estacionamiento:    <Car         size={18} strokeWidth={2} />,
-  admite_mascotas:    <PawPrint    size={18} strokeWidth={2} />,
-  quincho:            <Flame       size={18} strokeWidth={2} />,
-  parrilla:           <Beef        size={18} strokeWidth={2} />,
-  pileta:             <Waves       size={18} strokeWidth={2} />,
-  aire_acondicionado: <Snowflake   size={18} strokeWidth={2} />,
-  acceso_rio:         <Waves       size={18} strokeWidth={2} />,
-  cocina_equipada:    <Utensils    size={18} strokeWidth={2} />,
-  sanitarios:         <ShowerHead  size={18} strokeWidth={2} />,
-  agua_caliente:      <Thermometer size={18} strokeWidth={2} />,
-  fogon:              <Flame       size={18} strokeWidth={2} />,
-  guias_locales:      <Compass     size={18} strokeWidth={2} />,
+  wifi:             <Wifi        size={18} strokeWidth={2} />,
+  desayuno:         <Coffee      size={18} strokeWidth={2} />,
+  admite_mascotas:  <PawPrint    size={18} strokeWidth={2} />,
+  cocina_equipada:  <Utensils    size={18} strokeWidth={2} />,
+  banos_privados:   <ShowerHead  size={18} strokeWidth={2} />,
+  calefaccion:      <Thermometer size={18} strokeWidth={2} />,
+  fogon:            <Flame       size={18} strokeWidth={2} />,
+  agua_caliente:    <Thermometer size={18} strokeWidth={2} />,
+  cochera:          <Car         size={18} strokeWidth={2} />,
+  quincho:          <Flame       size={18} strokeWidth={2} />,
+  cama_matrimonial: <Bed         size={18} strokeWidth={2} />,
+  ventilador:       <Wind        size={18} strokeWidth={2} />,
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -123,7 +120,8 @@ export default function HospedajeDetallePage() {
   }
 
   // ── Datos derivados ──────────────────────────────────────────────────────
-  const catInfo          = CATEGORIAS[h.categoria] ?? { emoji: '🏠', label: h.categoria }
+  const categoriaArray   = Array.isArray(h.categoria) ? h.categoria : [h.categoria]
+  const catInfoArray     = categoriaArray.map(c => CATEGORIAS[c] ?? { emoji: '🏠', label: c })
   const precioFormateado = formatPrecio(h.precio_desde, h.moneda)
   const telefonoLimpio   = h.telefono.replace(/[\s\-()+]/g, '')
 
@@ -198,7 +196,7 @@ export default function HospedajeDetallePage() {
       <GaleriaImagenes
         imagenes={todasLasImagenes}
         nombre={h.nombre}
-        categoria={h.categoria}
+        categoria={categoriaArray[0]}
       />
 
       {/* ── GRID PRINCIPAL: contenido (2/3) + panel sticky (1/3) ──────────── */}
@@ -227,13 +225,15 @@ export default function HospedajeDetallePage() {
             <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
               <div className="flex flex-wrap items-center gap-2">
 
-                {/* Badge categoría — fondo noche, texto barro */}
-                <span className="inline-flex items-center gap-1.5
-                                 bg-noche text-barro-400
-                                 text-[11px] font-bold uppercase tracking-wider
-                                 px-3 py-1.5 rounded-full">
-                  {catInfo.emoji} {catInfo.label}
-                </span>
+                {/* Badges de categoría — uno por cada categoría */}
+                {catInfoArray.map((cat, i) => (
+                  <span key={i} className="inline-flex items-center gap-1.5
+                                   bg-noche text-barro-400
+                                   text-[11px] font-bold uppercase tracking-wider
+                                   px-3 py-1.5 rounded-full">
+                    {cat.emoji} {cat.label}
+                  </span>
+                ))}
 
                 {/* Badge "Destacado" — solo si destacado === true */}
                 {h.destacado && (
@@ -338,38 +338,6 @@ export default function HospedajeDetallePage() {
           </div>
           {/* ── FIN sección 4 ── */}
 
-          {/* ──────────────────────────────────────────────────────────────────
-              SECCIÓN 5 — TIPO DE TURISMO ("Ideal para")
-              ────────────────────────────────────────────────────────────────
-              Flex wrap de pills con fondo yunga-50.
-              Solo se renderiza si el array categorias_turismo tiene elementos.
-          ────────────────────────────────────────────────────────────────── */}
-          {h.categorias_turismo?.length > 0 && (
-            <div className="py-7 border-b border-arena-dark">
-              <h2 className="font-display text-xl text-noche mb-4">
-                Ideal para
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {h.categorias_turismo.map(key => {
-                  const info = CATEGORIAS_TURISMO[key]
-                  if (!info) return null
-                  return (
-                    <span
-                      key={key}
-                      className="inline-flex items-center gap-2
-                                 bg-yunga-50 border border-yunga-100
-                                 text-yunga-700 text-sm font-medium
-                                 px-4 py-2 rounded-full"
-                    >
-                      <span className="text-base leading-none">{info.emoji}</span>
-                      {info.label}
-                    </span>
-                  )
-                })}
-              </div>
-            </div>
-          )}
-          {/* ── FIN sección 5 ── */}
 
           {/* ──────────────────────────────────────────────────────────────────
               SECCIÓN 6 — CONTACTO MOBILE (lg:hidden)

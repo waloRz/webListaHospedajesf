@@ -24,8 +24,8 @@ import { Crosshair, AlertTriangle } from 'lucide-react'
 import { CATEGORIAS }    from '../../utils/serviciosConfig'
 
 // Centro de San Francisco, Jujuy
-const SF_CENTER = [-23.621640, -64.949483]
-const ZOOM_TODOS = 19.5
+const SF_CENTER = [-23.621969, -64.949715]  // Centro San Francisco, Valle Grande
+const ZOOM_TODOS = 19.5                        // Decimal posible con zoomSnap: 0.5
 
 // Color de pin por categoría (hex para el SVG inline)
 const COLOR_CATEGORIA = {
@@ -97,8 +97,10 @@ export default function MapaTodos({ hospedajes = [], className = '' }) {
 
         // ── Crear mapa centrado en San Francisco ──────────────────────────
         const map = L.map(mapaRef.current, {
-          center:      SF_CENTER,
-          zoom:        ZOOM_TODOS,
+          center:    SF_CENTER,
+          zoom:      ZOOM_TODOS,
+          zoomSnap:  0.1,   // permite zoom decimal: 13, 13.5, 14, 14.5...
+          zoomDelta: 0.25,   // cada click en +/- salta 0.5 niveles
           zoomControl: false,
         })
 
@@ -114,8 +116,9 @@ export default function MapaTodos({ hospedajes = [], className = '' }) {
           const { lat, lng } = h.coordenadas ?? {}
           if (typeof lat !== 'number' || typeof lng !== 'number') return
 
-          const icono  = crearIconoCategoria(L, h.categoria)
-          const catInfo = CATEGORIAS[h.categoria] ?? { emoji: '🏠', label: h.categoria }
+          const catPrimaria = Array.isArray(h.categoria) ? h.categoria[0] : h.categoria
+          const icono  = crearIconoCategoria(L, catPrimaria)
+          const catInfo = CATEGORIAS[catPrimaria] ?? { emoji: '🏠', label: catPrimaria }
 
           const fotoHtml = h.imagen_portada
             ? `<img src="${h.imagen_portada}" alt="${h.nombre}"
@@ -207,7 +210,7 @@ export default function MapaTodos({ hospedajes = [], className = '' }) {
 
   // ── Función: recentrar el mapa en San Francisco ──────────────────────────
   const centrarMapa = () => {
-    leafletRef.current?.setView(SF_CENTER, ZOOM_TODOS, { animate: true })
+    leafletRef.current?.setView(SF_CENTER, ZOOM_TODOS, { animate: true, duration: 0.5 })
   }
 
   if (estado === 'error') {
@@ -271,7 +274,7 @@ export default function MapaTodos({ hospedajes = [], className = '' }) {
           </p>
           {Object.entries(COLOR_CATEGORIA).map(([cat, { fill }]) => {
             const info  = CATEGORIAS[cat]
-            const count = hospedajes.filter(h => h.categoria === cat).length
+            const count = hospedajes.filter(h => (Array.isArray(h.categoria) ? h.categoria : [h.categoria]).includes(cat)).length
             if (count === 0) return null
             return (
               <div key={cat} className="flex items-center gap-2 mb-1 last:mb-0">
