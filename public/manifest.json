@@ -1,0 +1,14 @@
+{
+  "name": "Hospedajes San Francisco Jujuy",
+  "short_name": "HospedajesSFJ",
+  "description": "Directorio de hospedajes en San Francisco, Valle Grande, Jujuy, Argentina.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A2332",
+  "theme_color": "#1A2332",
+  "lang": "es-AR",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "categories": ["travel", "lifestyle"]
+}

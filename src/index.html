@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+         METADATOS ESTÁTICOS — Equivalente a layout.tsx de Next.js
+         ──────────────────────────────────────────────────────────────────────
+         Estos valores son el FALLBACK cuando react-helmet-async aún no
+         hidrata (o en bots que no ejecutan JavaScript).
+         react-helmet-async los sobreescribe dinámicamente en cada página.
+    ══════════════════════════════════════════════════════════════════════ -->
+
+    <!-- Title: mismo formato que layout.tsx en Next.js -->
+    <title>Hospedajes en San Francisco, Jujuy | Turismo Valle Grande</title>
+
+    <!-- Meta básicas -->
+    <meta name="description"
+          content="Encontrá los mejores hospedajes en San Francisco, Valle Grande, Jujuy. Hosterías, cabañas, camping y más en plena Yunga jujeña." />
+    <meta name="keywords"
+          content="hospedajes san francisco jujuy, turismo valle grande jujuy, cabañas jujuy, camping jujuy, hostería jujuy, yunga jujeña" />
+    <meta name="author"         content="Hospedajes San Francisco Jujuy" />
+    <meta name="robots"         content="index, follow" />
+    <meta name="theme-color"    content="#1A2332" />
+
+    <!-- Canonical: evitar contenido duplicado -->
+    <link rel="canonical" href="https://hospedajessanfrancisco.com.ar/" />
+
+    <!-- Favicon SVG: ícono de montaña en tierra-500 -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ── OPEN GRAPH ─────────────────────────────────────────────────── -->
+    <!-- og:title / og:description aparecen cuando alguien comparte el link -->
+    <meta property="og:type"         content="website" />
+    <meta property="og:url"          content="https://hospedajessanfrancisco.com.ar/" />
+    <meta property="og:title"        content="Hospedajes en San Francisco, Jujuy | Turismo Valle Grande" />
+    <meta property="og:description"  content="Encontrá los mejores hospedajes en San Francisco, Valle Grande, Jujuy. Hosterías, cabañas, camping y más." />
+    <meta property="og:image"        content="https://hospedajessanfrancisco.com.ar/og-image.jpg" />
+    <meta property="og:image:alt"    content="Paisaje de la Yunga Jujeña — San Francisco, Valle Grande, Jujuy" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name"    content="Hospedajes San Francisco Jujuy" />
+    <meta property="og:locale"       content="es_AR" />
+
+    <!-- ── TWITTER CARD ───────────────────────────────────────────────── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:site"        content="@hospedajesSFJujuy" />
+    <meta name="twitter:title"       content="Hospedajes en San Francisco, Jujuy | Turismo Valle Grande" />
+    <meta name="twitter:description" content="Encontrá los mejores hospedajes en San Francisco, Valle Grande, Jujuy." />
+    <meta name="twitter:image"       content="https://hospedajessanfrancisco.com.ar/og-image.jpg" />
+
+    <!-- ── STRUCTURED DATA ESTÁTICO (homepage) ───────────────────────────
+         JSON-LD tipo WebSite + TouristInformationCenter.
+         Este schema es estático (fallback). El dinámico lo inyecta SEOHead.
+    ── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://hospedajessanfrancisco.com.ar/#website",
+          "name": "Hospedajes San Francisco Jujuy",
+          "url": "https://hospedajessanfrancisco.com.ar",
+          "description": "Directorio de hospedajes en San Francisco, Valle Grande, Jujuy, Argentina.",
+          "inLanguage": "es-AR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://hospedajessanfrancisco.com.ar/hospedajes?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "TouristInformationCenter",
+          "@id": "https://hospedajessanfrancisco.com.ar/#organization",
+          "name": "Hospedajes San Francisco Jujuy",
+          "url": "https://hospedajessanfrancisco.com.ar",
+          "description": "Directorio de hospedajes turísticos en San Francisco, Valle Grande, Jujuy, Argentina.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Francisco",
+            "addressRegion": "Jujuy",
+            "addressCountry": "AR",
+            "postalCode": "4634"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-23.9500",
+            "longitude": "-65.0700"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "San Francisco, Valle Grande, Jujuy"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ── FUENTES ────────────────────────────────────────────────────── -->
+    <!-- preconnect: reduce latencia DNS para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
