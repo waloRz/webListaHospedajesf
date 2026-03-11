@@ -33,9 +33,11 @@
       "romantico"
     ],
     "imagenes": [
-      "/img/001/foto1.jpg",
-      "/img/001/foto2.jpg",
-      "/img/001/foto3.jpg"
+      "/img/001/foto1.webp",
+      "/img/001/foto2.webp",
+      "/img/001/foto3.webp",
+      "/img/001/foto4.webp",
+      "/img/001/foto5.webp"
     ],
     "imagen_portada": "/img/001/portada.webp",
     "activo": true,

@@ -248,15 +248,15 @@ export default function HospedajeDetallePage() {
 
               {/* Caja de precio — solo si existe precio_desde en el JSON */}
               {precioFormateado && (
-                <div className="shrink-0 bg-tierra-50 border border-tierra-100
+                <div className="shrink-0 bg-tierra-100 border border-tierra-300
                                 rounded-xl px-4 py-2.5 text-right">
-                  <p className="text-tierra-300 text-[9px] uppercase tracking-widest mb-0.5">
+                  <p className="text-tierra-700 text-[9px] uppercase tracking-widest mb-0.5">
                     desde
                   </p>
                   <p className="text-tierra-600 font-bold text-xl leading-none">
                     {precioFormateado}
                   </p>
-                  <p className="text-tierra-300 text-[10px] mt-0.5">por noche</p>
+                  <p className="text-tierra-700 text-[10px] mt-0.5">por noche</p>
                 </div>
               )}
             </div>

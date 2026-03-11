@@ -39,7 +39,7 @@ export default function HomePage() {
 
         {/* FOTO DE FONDO — poné tu foto en /public/img/hero.jpg */}
         <img
-          src="/img/hero.jpg"
+          src="/img/hero.webp"
           alt="Paisaje de San Francisco, Valle Grande, Jujuy"
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading="eager"
