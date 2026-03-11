@@ -37,8 +37,8 @@
       "/img/001/foto2.webp",
       "/img/001/foto3.webp",
       "/img/001/foto4.webp",
-      "/img/001/foto5.webp",
-      "/img/001/foto6.webp"
+      "/img/001/foto5.webp"
+     
     ],
     "imagen_portada": "/img/001/portada.webp",
     "activo": true,
@@ -75,12 +75,7 @@
       "naturaleza"
     ],
     "imagenes": [
-      "/img/002/foto1.webp",
-      "/img/002/foto2.webp",
-      "/img/002/foto3.webp",
-      "/img/002/foto4.webp",
-      "/img/002/foto5.webp",
-      "/img/002/foto6.webp"
+     
     ],
     "imagen_portada": "/img/002/portada.jpg",
     "activo": true,
@@ -118,12 +113,7 @@
       "mochilero"
     ],
     "imagenes": [
-      "/img/003/foto1.webp",
-      "/img/003/foto2.webp",
-      "/img/003/foto3.webp",
-      "/img/003/foto4.webp",
-      "/img/003/foto5.webp",
-      "/img/003/foto6.webp"
+     
     ],
     "imagen_portada": "/img/003/portada.jpg",
     "activo": true,
@@ -161,12 +151,7 @@
       "mochilero"
     ],
     "imagenes": [
-      "/img/004/foto1.webp",
-      "/img/004/foto2.webp",
-      "/img/004/foto3.webp",
-      "/img/004/foto4.webp",
-      "/img/004/foto5.webp",
-      "/img/004/foto6.webp"
+      
     ],
     "imagen_portada": "/img/004/portada.jpg",
     "activo": true,
@@ -204,12 +189,7 @@
       "mochilero"
     ],
     "imagenes": [
-      "/img/005/foto1.webp",
-      "/img/005/foto2.webp",
-      "/img/005/foto3.webp",
-      "/img/005/foto4.webp",
-      "/img/005/foto5.webp",
-      "/img/005/foto6.webp"
+      
     ],
     "imagen_portada": "/img/005/portada.jpg",
     "activo": true,
@@ -247,12 +227,7 @@
       "mochilero"
     ],
     "imagenes": [
-      "/img/006/foto1.webp",
-      "/img/006/foto2.webp",
-      "/img/006/foto3.webp",
-      "/img/006/foto4.webp",
-      "/img/006/foto5.webp",
-      "/img/006/foto6.webp"
+     
     ],
     "imagen_portada": "/img/006/portada.jpg",
     "activo": true,
@@ -290,12 +265,7 @@
       "mochilero"
     ],
     "imagenes": [
-     "/img/007/foto1.webp",
-      "/img/007/foto2.webp",
-      "/img/007/foto3.webp",
-      "/img/007/foto4.webp",
-      "/img/007/foto5.webp",
-      "/img/007/foto6.webp"
+    
     ],
     "imagen_portada": "/img/007/portada.jpg",
     "activo": true,
@@ -333,12 +303,7 @@
       "mochilero"
     ],
     "imagenes": [
-     "/img/008/foto1.webp",
-      "/img/008/foto2.webp",
-      "/img/008/foto3.webp",
-      "/img/008/foto4.webp",
-      "/img/008/foto5.webp",
-      "/img/008/foto6.webp"
+     
     ],
     "imagen_portada": "/img/008/portada.jpg",
     "activo": true,
@@ -376,12 +341,7 @@
       "mochilero"
     ],
     "imagenes": [
-     "/img/009/foto1.webp",
-      "/img/009/foto2.webp",
-      "/img/009/foto3.webp",
-      "/img/009/foto4.webp",
-      "/img/009/foto5.webp",
-      "/img/009/foto6.webp"
+     
     ],
     "imagen_portada": "/img/009/portada.jpg",
     "activo": true,
