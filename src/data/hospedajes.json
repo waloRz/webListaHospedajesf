@@ -37,7 +37,8 @@
       "/img/001/foto2.webp",
       "/img/001/foto3.webp",
       "/img/001/foto4.webp",
-      "/img/001/foto5.webp"
+      "/img/001/foto5.webp",
+      "/img/001/foto6.webp"
     ],
     "imagen_portada": "/img/001/portada.webp",
     "activo": true,
@@ -45,18 +46,18 @@
   },
   {
     "id": "002",
-    "nombre": "Complejo Cabañas Luana",
+    "nombre": "Hospedaje Luana",
     "categoria": [
-      "cabaña"
+       "hostería"
     ],
     "descripcion": "Complejo de 6 cabañas de madera nativa, cada una con galería privada con vista al bosque. A 300 metros del Río Bermejo, con acceso directo para pesca y natación. Las cabañas tienen capacidad para 4 a 6 personas, equipadas con cocina completa y parrilla individual.",
     "descripcion_corta": "Cabañas de madera nativa con galería y acceso directo al río.",
-    "telefono": "+54 388 400-0002",
-    "whatsapp": "5438840000002",
+    "telefono": "+54 3886598800",
+    "whatsapp": "543886598800",
     "direccion": "Camino al Río Bermejo S/N, San Francisco, Valle Grande, Jujuy",
     "coordenadas": {
-      "lat": -23.623915,
-      "lng": -64.953720
+      "lat": -23.623864,
+      "lng": -64.953742
     },
     "capacidad": 30,
     "precio_desde": 25000,
@@ -74,10 +75,12 @@
       "naturaleza"
     ],
     "imagenes": [
-      "/img/002/foto1.jpg",
-      "/img/002/foto2.jpg",
-      "/img/002/foto3.jpg",
-      "/img/002/foto4.jpg"
+      "/img/002/foto1.webp",
+      "/img/002/foto2.webp",
+      "/img/002/foto3.webp",
+      "/img/002/foto4.webp",
+      "/img/002/foto5.webp",
+      "/img/002/foto6.webp"
     ],
     "imagen_portada": "/img/002/portada.jpg",
     "activo": true,
@@ -85,18 +88,18 @@
   },
   {
     "id": "003",
-    "nombre": "Camping La Yunga",
+    "nombre": "Hospedaje Lore",
     "categoria": [
-      "camping"
+      "hostería"
     ],
     "descripcion": "Camping natural en el corazón de la Yunga jujeña. Parcelas sombreadas bajo una selva exuberante, con instalaciones sanitarias completas, agua caliente y fogones individuales. Ideal para trekkers, ciclistas y amantes del turismo de aventura. El camping cuenta con guías locales disponibles para excursiones.",
     "descripcion_corta": "Parcelas en plena selva de Yunga con sanitarios completos y fogones.",
-    "telefono": "+54 388 400-0003",
-    "whatsapp": "5438840000003",
+    "telefono": "+54 3886413568",
+    "whatsapp": "543886413568",
     "direccion": "Zona Sur, Acceso por Ruta Prov. 83, San Francisco, Jujuy",
     "coordenadas": {
-      "lat": -23.96,
-      "lng": -65.078
+      "lat": -23.622904,
+      "lng": -64.953298
     },
     "capacidad": 50,
     "precio_desde": 3500,
@@ -115,10 +118,272 @@
       "mochilero"
     ],
     "imagenes": [
-      "/img/003/foto1.jpg",
-      "/img/003/foto2.jpg"
+      "/img/003/foto1.webp",
+      "/img/003/foto2.webp",
+      "/img/003/foto3.webp",
+      "/img/003/foto4.webp",
+      "/img/003/foto5.webp",
+      "/img/003/foto6.webp"
     ],
     "imagen_portada": "/img/003/portada.jpg",
+    "activo": true,
+    "destacado": false
+  },
+  {
+    "id": "004",
+    "nombre": "Hospedaje San Francisco",
+    "categoria": [
+      "hostería"
+    ],
+    "descripcion": "Camping natural en el corazón de la Yunga jujeña. Parcelas sombreadas bajo una selva exuberante, con instalaciones sanitarias completas, agua caliente y fogones individuales. Ideal para trekkers, ciclistas y amantes del turismo de aventura. El camping cuenta con guías locales disponibles para excursiones.",
+    "descripcion_corta": "Parcelas en plena selva de Yunga con sanitarios completos y fogones.",
+    "telefono": "+54 3886352559",
+    "whatsapp": "543886352559",
+    "direccion": "Zona Sur, Acceso por Ruta Prov. 83, San Francisco, Jujuy",
+    "coordenadas": {
+      "lat": -23.621747,
+      "lng": -64.947640
+    },
+    "capacidad": 50,
+    "precio_desde": 3500,
+    "moneda": "ARS",
+    "servicios": [
+      "banos_privados",
+      "agua_caliente",
+      "fogon",
+      "admite_mascotas",
+      "cochera"
+    ],
+    "categorias_turismo": [
+      "aventura",
+      "trekking",
+      "naturaleza",
+      "mochilero"
+    ],
+    "imagenes": [
+      "/img/004/foto1.webp",
+      "/img/004/foto2.webp",
+      "/img/004/foto3.webp",
+      "/img/004/foto4.webp",
+      "/img/004/foto5.webp",
+      "/img/004/foto6.webp"
+    ],
+    "imagen_portada": "/img/004/portada.jpg",
+    "activo": true,
+    "destacado": false
+  },
+  {
+    "id": "005",
+    "nombre": "Cabañas La Victoria",
+    "categoria": [
+      "cabaña"
+    ],
+    "descripcion": "Camping natural en el corazón de la Yunga jujeña. Parcelas sombreadas bajo una selva exuberante, con instalaciones sanitarias completas, agua caliente y fogones individuales. Ideal para trekkers, ciclistas y amantes del turismo de aventura. El camping cuenta con guías locales disponibles para excursiones.",
+    "descripcion_corta": "Parcelas en plena selva de Yunga con sanitarios completos y fogones.",
+    "telefono": "+54 3886477257",
+    "whatsapp": "543886477257",
+    "direccion": "Zona Sur, Acceso por Ruta Prov. 83, San Francisco, Jujuy",
+    "coordenadas": {
+      "lat": -23.618387,
+      "lng": -64.953101
+    },
+    "capacidad": 50,
+    "precio_desde": 3500,
+    "moneda": "ARS",
+    "servicios": [
+      "banos_privados",
+      "agua_caliente",
+      "fogon",
+      "admite_mascotas",
+      "cochera"
+    ],
+    "categorias_turismo": [
+      "aventura",
+      "trekking",
+      "naturaleza",
+      "mochilero"
+    ],
+    "imagenes": [
+      "/img/005/foto1.webp",
+      "/img/005/foto2.webp",
+      "/img/005/foto3.webp",
+      "/img/005/foto4.webp",
+      "/img/005/foto5.webp",
+      "/img/005/foto6.webp"
+    ],
+    "imagen_portada": "/img/005/portada.jpg",
+    "activo": true,
+    "destacado": false
+  },
+  {
+    "id": "006",
+    "nombre": "La Casona de Eugenia",
+    "categoria": [
+      "cabaña"
+    ],
+    "descripcion": "Camping natural en el corazón de la Yunga jujeña. Parcelas sombreadas bajo una selva exuberante, con instalaciones sanitarias completas, agua caliente y fogones individuales. Ideal para trekkers, ciclistas y amantes del turismo de aventura. El camping cuenta con guías locales disponibles para excursiones.",
+    "descripcion_corta": "Parcelas en plena selva de Yunga con sanitarios completos y fogones.",
+    "telefono": "+54 91124531985",
+    "whatsapp": "5491124531985",
+    "direccion": "Zona Sur, Acceso por Ruta Prov. 83, San Francisco, Jujuy",
+    "coordenadas": {
+      "lat": -23.621117,
+      "lng": -64.953613
+    },
+    "capacidad": 50,
+    "precio_desde": 3500,
+    "moneda": "ARS",
+    "servicios": [
+      "banos_privados",
+      "agua_caliente",
+      "fogon",
+      "admite_mascotas",
+      "cochera"
+    ],
+    "categorias_turismo": [
+      "aventura",
+      "trekking",
+      "naturaleza",
+      "mochilero"
+    ],
+    "imagenes": [
+      "/img/006/foto1.webp",
+      "/img/006/foto2.webp",
+      "/img/006/foto3.webp",
+      "/img/006/foto4.webp",
+      "/img/006/foto5.webp",
+      "/img/006/foto6.webp"
+    ],
+    "imagen_portada": "/img/006/portada.jpg",
+    "activo": true,
+    "destacado": false
+  },
+  {
+    "id": "007",
+    "nombre": "Cabaña Flor del Valle",
+    "categoria": [
+      "cabaña"
+    ],
+    "descripcion": "Camping natural en el corazón de la Yunga jujeña. Parcelas sombreadas bajo una selva exuberante, con instalaciones sanitarias completas, agua caliente y fogones individuales. Ideal para trekkers, ciclistas y amantes del turismo de aventura. El camping cuenta con guías locales disponibles para excursiones.",
+    "descripcion_corta": "Parcelas en plena selva de Yunga con sanitarios completos y fogones.",
+    "telefono": "+54 91169969291",
+    "whatsapp": "5491169969291",
+    "direccion": "Zona Sur, Acceso por Ruta Prov. 83, San Francisco, Jujuy",
+    "coordenadas": {
+      "lat": -23.623084,
+      "lng": -64.955108
+    },
+    "capacidad": 50,
+    "precio_desde": 3500,
+    "moneda": "ARS",
+    "servicios": [
+      "banos_privados",
+      "agua_caliente",
+      "fogon",
+      "admite_mascotas",
+      "cochera"
+    ],
+    "categorias_turismo": [
+      "aventura",
+      "trekking",
+      "naturaleza",
+      "mochilero"
+    ],
+    "imagenes": [
+     "/img/007/foto1.webp",
+      "/img/007/foto2.webp",
+      "/img/007/foto3.webp",
+      "/img/007/foto4.webp",
+      "/img/007/foto5.webp",
+      "/img/007/foto6.webp"
+    ],
+    "imagen_portada": "/img/007/portada.jpg",
+    "activo": true,
+    "destacado": false
+  },
+  {
+    "id": "008",
+    "nombre": "Casa Luna Colorada",
+    "categoria": [
+      "cabaña"
+    ],
+    "descripcion": "Camping natural en el corazón de la Yunga jujeña. Parcelas sombreadas bajo una selva exuberante, con instalaciones sanitarias completas, agua caliente y fogones individuales. Ideal para trekkers, ciclistas y amantes del turismo de aventura. El camping cuenta con guías locales disponibles para excursiones.",
+    "descripcion_corta": "Parcelas en plena selva de Yunga con sanitarios completos y fogones.",
+    "telefono": "+54 3886519440",
+    "whatsapp": "543886519440",
+    "direccion": "Zona Sur, Acceso por Ruta Prov. 83, San Francisco, Jujuy",
+    "coordenadas": {
+      "lat": -23.622950,
+      "lng": -64.954946
+    },
+    "capacidad": 50,
+    "precio_desde": 3500,
+    "moneda": "ARS",
+    "servicios": [
+      "banos_privados",
+      "agua_caliente",
+      "fogon",
+      "admite_mascotas",
+      "cochera"
+    ],
+    "categorias_turismo": [
+      "aventura",
+      "trekking",
+      "naturaleza",
+      "mochilero"
+    ],
+    "imagenes": [
+     "/img/008/foto1.webp",
+      "/img/008/foto2.webp",
+      "/img/008/foto3.webp",
+      "/img/008/foto4.webp",
+      "/img/008/foto5.webp",
+      "/img/008/foto6.webp"
+    ],
+    "imagen_portada": "/img/008/portada.jpg",
+    "activo": true,
+    "destacado": false
+  },
+  {
+    "id": "009",
+    "nombre": "Hostel/Camping Los Ocutos",
+    "categoria": [
+      "camping", "hostería"
+    ],
+    "descripcion": "Camping natural en el corazón de la Yunga jujeña. Parcelas sombreadas bajo una selva exuberante, con instalaciones sanitarias completas, agua caliente y fogones individuales. Ideal para trekkers, ciclistas y amantes del turismo de aventura. El camping cuenta con guías locales disponibles para excursiones.",
+    "descripcion_corta": "Parcelas en plena selva de Yunga con sanitarios completos y fogones.",
+    "telefono": "+54 3886655226",
+    "whatsapp": "543886655226",
+    "direccion": "Zona Sur, Acceso por Ruta Prov. 83, San Francisco, Jujuy",
+    "coordenadas": {
+      "lat": -23.625610,
+      "lng": -64.951904
+    },
+    "capacidad": 50,
+    "precio_desde": 3500,
+    "moneda": "ARS",
+    "servicios": [
+      "banos_privados",
+      "agua_caliente",
+      "fogon",
+      "admite_mascotas",
+      "cochera"
+    ],
+    "categorias_turismo": [
+      "aventura",
+      "trekking",
+      "naturaleza",
+      "mochilero"
+    ],
+    "imagenes": [
+     "/img/009/foto1.webp",
+      "/img/009/foto2.webp",
+      "/img/009/foto3.webp",
+      "/img/009/foto4.webp",
+      "/img/009/foto5.webp",
+      "/img/009/foto6.webp"
+    ],
+    "imagen_portada": "/img/009/portada.jpg",
     "activo": true,
     "destacado": false
   }
