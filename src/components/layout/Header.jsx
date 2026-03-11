@@ -159,7 +159,7 @@ export default function Header({ transparente = false }) {
               {/* Texto del logo: dos partes con colores distintos */}
               <span className="font-display leading-none">
                 <span className="text-white text-[17px] tracking-tight">
-                  Hospedajes{' '}
+                  Hospedajes en{' '}
                 </span>
                 <span className="text-noche text-[17px] tracking-tight
                                  group-hover:text-noche/70 transition-colors duration-200">
@@ -374,7 +374,7 @@ export default function Header({ transparente = false }) {
           >
             <Mountain size={22} strokeWidth={1.5} className="text-noche" />
             <span className="font-display text-sm text-white">
-              San <span className="text-noche">Francisco</span>
+              Hospedajes en <span className="text-noche">SF</span>
             </span>
           </Link>
 

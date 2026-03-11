@@ -25,18 +25,17 @@ import { CATEGORIAS }    from '../../utils/serviciosConfig'
 
 // Centro de San Francisco, Jujuy
 const SF_CENTER = [-23.621969, -64.949715]  // Centro San Francisco, Valle Grande
-const ZOOM_TODOS = 19.5                        // Decimal posible con zoomSnap: 0.5
+const ZOOM_TODOS = 14.5                        // Decimal posible con zoomSnap: 0.5
 
-// Color de pin por categoría (hex para el SVG inline)
+// Color de pin por categoría
 const COLOR_CATEGORIA = {
-  'hotel':    { fill: '#4d7f93', label: '#cielo' },  // cielo-600
-  'hostería': { fill: '#8B5E3C', label: '#tierra' }, // tierra-500
-  'cabaña':   { fill: '#62402a', label: '#tierra' }, // tierra-700
-  'camping':  { fill: '#335c43', label: '#yunga' },  // yunga-600
-  'hostel':   { fill: '#C4956A', label: '#barro' },  // barro-500
-  'b&b':      { fill: '#274836', label: '#yunga' },  // yunga-800
+  'hostería': { fill: '#E53E3E' },  // rojo
+  'cabaña':   { fill: '#3B82F6' },  // azul
+  'camping':  { fill: '#F59E0B' },  // amarillo
+  'hostel':   { fill: '#8B5CF6' },  // violeta
+  'b&b':      { fill: '#F97316' },  // naranja
 }
-const COLOR_DEFAULT = { fill: '#8B5E3C' }
+const COLOR_DEFAULT = { fill: '#E53E3E' }
 
 function crearIconoCategoria(L, categoria) {
   const color = (COLOR_CATEGORIA[categoria] || COLOR_DEFAULT).fill
@@ -99,8 +98,8 @@ export default function MapaTodos({ hospedajes = [], className = '' }) {
         const map = L.map(mapaRef.current, {
           center:    SF_CENTER,
           zoom:      ZOOM_TODOS,
-          zoomSnap:  0.1,   // permite zoom decimal: 13, 13.5, 14, 14.5...
-          zoomDelta: 0.25,   // cada click en +/- salta 0.5 niveles
+          zoomSnap:  0.5,   // permite zoom decimal: 13, 13.5, 14, 14.5...
+          zoomDelta: 0.5,   // cada click en +/- salta 0.5 niveles
           zoomControl: false,
         })
 

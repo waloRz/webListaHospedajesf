@@ -198,13 +198,13 @@ export default function HospedajeCard({ hospedaje, variant = 'default' }) {
         ── */}
         {precioFormateado && (
           <div className="absolute bottom-3 right-3 z-10
-                          bg-noche/75 backdrop-blur-md
-                          text-arena rounded-xl px-2.5 py-1.5 leading-none text-right">
-            <span className="block text-barro-300 text-[9px] uppercase tracking-widest mb-0.5">
+                          bg-noche/80 backdrop-blur-md
+                          text-arena rounded-xl px-3 py-2 leading-none text-right">
+            <span className="block text-barro-300 text-[10px] uppercase tracking-widest mb-1">
               desde
             </span>
-            <span className="text-sm font-bold">{precioFormateado}</span>
-            <span className="text-arena/50 text-[10px]"> /noche</span>
+            <span className="text-lg font-bold">{precioFormateado}</span>
+            <span className="text-arena/50 text-xs"> /noche</span>
           </div>
         )}
       </Link>

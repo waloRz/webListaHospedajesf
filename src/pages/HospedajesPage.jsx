@@ -80,9 +80,9 @@ export default function HospedajesPage() {
         <button
           onClick={() => setDrawerAbierto(true)}
           className="lg:hidden flex items-center gap-2
-                     bg-white border border-arena-dark rounded-xl
-                     px-4 py-2.5 text-sm font-semibold text-tierra-600
-                     shadow-sm hover:border-tierra-400 transition-colors
+                     bg-yunga-500 hover:bg-yunga-400 rounded-xl
+                     px-5 py-3 text-base font-bold text-white
+                     shadow-md hover:shadow-lg transition-all
                      active:scale-[0.97]"
         >
           <SlidersHorizontal size={15} strokeWidth={2} />

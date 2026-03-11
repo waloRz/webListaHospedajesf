@@ -17,7 +17,7 @@ import { CATEGORIAS }    from '../utils/serviciosConfig'
 import HospedajeCard     from '../components/hospedaje/HospedajeCard'
 
 export default function HomePage() {
-  const { totalActivos, destacados } = useHospedajes()
+  const { totalActivos, aleatorios } = useHospedajes()
 
   return (
     <div>
@@ -39,7 +39,7 @@ export default function HomePage() {
 
         {/* FOTO DE FONDO — poné tu foto en /public/img/hero.jpg */}
         <img
-          src="/img/hero.webp"
+          src="/img/hero.jpg"
           alt="Paisaje de San Francisco, Valle Grande, Jujuy"
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading="eager"
@@ -47,24 +47,25 @@ export default function HomePage() {
         />
 
         {/* OVERLAY VERDE YUNGA — capa 1: tono verde uniforme al 65% */}
-        <div className="absolute inset-0 bg-yunga-900/45" />
+        <div className="absolute inset-0 bg-yunga-900/65" />
         {/* OVERLAY — capa 2: gradiente hacia abajo para mejor legibilidad del texto */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-yunga-900/50" />
 
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-          <span className="inline-block bg-barro-500/20 border border-barro-400/40 text-arena
+          <span className="inline-block bg-white/15 border border-white/50 text-white
                            text-xs font-bold tracking-[3px] uppercase px-4 py-2 rounded-full mb-6">
-            ⛰️ Valle Grande · Jujuy · Argentina
+            ⛰️ San Francisco · Jujuy · Argentina
           </span>
           <h1 className="font-display text-5xl md:text-6xl text-arena leading-tight mb-4">
             Tu estadía en<br />
-            <span className="text-barro-200">San Francisco</span>
+            <span className="text-barro-400">San Francisco</span>
           </h1>
-          <p className="text-arena/90 text-lg mb-10 max-w-md mx-auto">
+          <p className="text-arena/60 text-lg mb-10 max-w-md mx-auto">
             Encontrá el hospedaje ideal entre la selva y las montañas jujeñas
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/hospedajes" className="text-white font-semibold text-base px-8 py-3.5 rounded-btn
+            <Link to="/hospedajes"
+              className="text-white font-semibold text-base px-8 py-3.5 rounded-btn
                          flex items-center gap-2 justify-center
                          transition-colors duration-200"
               style={{ backgroundColor: 'rgb(121 163 179)' }}
@@ -102,7 +103,7 @@ export default function HomePage() {
       {/* ── DESTACADOS ──────────────────────────────────────────────── */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex items-baseline justify-between mb-8">
-          <h2 className="font-display text-3xl text-noche">Hospedajes destacados</h2>
+          <h2 className="font-display text-3xl text-noche">Conocé nuestros hospedajes</h2>
           <Link to="/hospedajes" className="text-yunga-500 text-sm font-semibold hover:underline">
             Ver todos →
           </Link>
@@ -118,8 +119,8 @@ export default function HomePage() {
           │ items-stretch: todas las cards tienen la misma altura│
           └──────────────────────────────────────────────────────┘
         */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 items-stretch">
-          {destacados.map(h => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 items-stretch">
+          {aleatorios.map(h => (
             <HospedajeCard key={h.id} hospedaje={h} variant="default" />
           ))}
         </div>
