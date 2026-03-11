@@ -7,8 +7,8 @@
     ],
     "descripcion": "Tranquilo, establecimiento rodeado de arboles en San Francisco. Hospedaje con amplio comedor y habitaciones ideal para familias y parejas que buscan descanso en plena naturaleza de la Yunga jujeña. El sonido del los pájaros de las yungas son parte de la experiencia.",
     "descripcion_corta": "Rodeada de nubes en lo alto de San Francisco.",
-    "telefono": "+54 388 400-0001",
-    "whatsapp": "5438840000001",
+    "telefono": "+54 3886526596",
+    "whatsapp": "+543886526596",
     "direccion": "Ruta Provincial 83 Km 42, San Francisco, Valle Grande, Jujuy",
     "coordenadas": {
       "lat": -23.621722,
@@ -37,7 +37,7 @@
       "/img/001/foto2.jpg",
       "/img/001/foto3.jpg"
     ],
-    "imagen_portada": "/img/001/portada.jpg",
+    "imagen_portada": "/img/001/portada.webp",
     "activo": true,
     "destacado": true
   },
