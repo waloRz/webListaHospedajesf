@@ -37,8 +37,7 @@
       "/img/001/foto2.webp",
       "/img/001/foto3.webp",
       "/img/001/foto4.webp",
-      "/img/001/foto5.webp"
-     
+      "/img/001/foto5.webp"     
     ],
     "imagen_portada": "/img/001/portada.webp",
     "activo": true,
@@ -115,7 +114,7 @@
     "imagenes": [
      
     ],
-    "imagen_portada": "/img/003/portada.jpg",
+    "imagen_portada": "/img/003/portada.webp",
     "activo": true,
     "destacado": false
   },
@@ -153,7 +152,7 @@
     "imagenes": [
       
     ],
-    "imagen_portada": "/img/004/portada.jpg",
+    "imagen_portada": "/img/004/portada.webp",
     "activo": true,
     "destacado": false
   },
@@ -191,7 +190,7 @@
     "imagenes": [
       
     ],
-    "imagen_portada": "/img/005/portada.jpg",
+    "imagen_portada": "/img/005/portada.webp",
     "activo": true,
     "destacado": false
   },
@@ -229,7 +228,7 @@
     "imagenes": [
      
     ],
-    "imagen_portada": "/img/006/portada.jpg",
+    "imagen_portada": "/img/006/portada.webp",
     "activo": true,
     "destacado": false
   },
@@ -267,7 +266,7 @@
     "imagenes": [
     
     ],
-    "imagen_portada": "/img/007/portada.jpg",
+    "imagen_portada": "/img/007/portada.webp",
     "activo": true,
     "destacado": false
   },
@@ -305,7 +304,7 @@
     "imagenes": [
      
     ],
-    "imagen_portada": "/img/008/portada.jpg",
+    "imagen_portada": "/img/008/portada.webp",
     "activo": true,
     "destacado": false
   },
@@ -343,7 +342,7 @@
     "imagenes": [
      
     ],
-    "imagen_portada": "/img/009/portada.jpg",
+    "imagen_portada": "/img/009/portada.webp",
     "activo": true,
     "destacado": false
   }
