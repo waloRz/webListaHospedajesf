@@ -37,23 +37,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        {/* ── Aviso legal ── */}
-        <div className="border-t border-white/10 mt-10 pt-6 space-y-3">
-          <p className="text-xs text-arena/35 leading-relaxed text-center max-w-3xl mx-auto">
-            <span className="text-arena/50 font-semibold">Aviso legal:</span>{' '}
-            Este sitio es un directorio informativo. La información de cada hospedaje
-            (precios, servicios, disponibilidad y fotos) es provista y es responsabilidad
-            exclusiva de cada propietario. No garantizamos la exactitud de los datos ni
-            nos responsabilizamos por cambios sin previo aviso. Ante cualquier
-            inconveniente o información incorrecta,{' '}
-            <a href="https://wa.me/5493874434836" target="_blank" rel="noopener noreferrer"
-               className="underline hover:text-barro-400 transition-colors">
-              contactanos por WhatsApp
-            </a>.
-          </p>
-          <p className="text-xs text-arena/25 text-center">
-            © {new Date().getFullYear()} Hospedajes en San Francisco Jujuy · Directorio turístico · San Francisco, Valle Grande, Jujuy, Argentina
-          </p>
+        <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs text-arena/30">
+          © {new Date().getFullYear()} Hospedajes San Francisco Jujuy · Directorio turístico
         </div>
       </div>
     </footer>

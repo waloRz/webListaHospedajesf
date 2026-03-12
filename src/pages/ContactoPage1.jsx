@@ -5,7 +5,7 @@
  * para sumarse al directorio. Contacto directo por WhatsApp.
  */
 
-import { MessageCircle, MapPin, Star, Users, TrendingUp, CheckCircle } from 'lucide-react'
+import { MessageCircle, MapPin, Star, Users, TrendingUp, CheckCircle, QrCode, Phone } from 'lucide-react'
 import SEOHead from '../seo/SEOHead'
 
 const WA_NUMBER  = '5493874434836'
@@ -16,24 +16,34 @@ const WA_URL = `https://wa.me/${WA_NUMBER}?text=${WA_MENSAJE}`
 
 const BENEFICIOS = [
   {
-    icono: <Users size={22} strokeWidth={1.5} />,
-    titulo: 'Más visibilidad',
-    texto: 'Tu hospedaje aparece en el directorio que consultan los turistas que visitan San Francisco.',
-  },
-  {
-    icono: <TrendingUp size={22} strokeWidth={1.5} />,
-    titulo: 'Más reservas',
-    texto: 'Los viajeros te encuentran fácilmente y se contactan directo con vos por teléfono o WhatsApp.',
-  },
-  {
-    icono: <MapPin size={22} strokeWidth={1.5} />,
-    titulo: 'En el mapa',
-    texto: 'Tu hospedaje aparece marcado en el mapa interactivo de la zona con toda la información.',
+    icono: <QrCode size={22} strokeWidth={1.5} />,
+    titulo: 'Código QR en Turismo',
+    texto: 'Tu hospedaje se promociona a través de un código QR disponible en la oficina de Turismo de San Francisco.',
   },
   {
     icono: <Star size={22} strokeWidth={1.5} />,
-    titulo: 'Sin costo',
-    texto: 'El directorio es gratuito para los hospedajes. Solo necesitás fotos y datos de contacto.',
+    titulo: 'Costo mínimo de inscripción',
+    texto: 'Accedé al directorio con una inscripción accesible. Una inversión mínima para una visibilidad máxima.',
+  },
+  {
+    icono: <Users size={22} strokeWidth={1.5} />,
+    titulo: 'Búsqueda inteligente',
+    texto: 'El turista filtra por los servicios que necesita. Dejamos atrás las listas de solo números de teléfono sin información.',
+  },
+  {
+    icono: <TrendingUp size={22} strokeWidth={1.5} />,
+    titulo: 'Visibles las 24 horas',
+    texto: 'Tu hospedaje está disponible para ser consultado en cualquier momento del día, todos los días del año.',
+  },
+  {
+    icono: <Phone size={22} strokeWidth={1.5} />,
+    titulo: 'Contacto directo e inmediato',
+    texto: 'El turista se comunica con vos por llamada (Personal, Movistar o Claro) o mensaje de WhatsApp en un solo click.',
+  },
+  {
+    icono: <MapPin size={22} strokeWidth={1.5} />,
+    titulo: 'Ubicación en el mapa',
+    texto: 'Tu hospedaje aparece con un pin en el mapa interactivo para que el turista llegue sin perderse.',
   },
 ]
 
@@ -48,7 +58,7 @@ export default function ContactoPage() {
     <>
       <SEOHead
         title="Sumar mi hospedaje — Hospedajes en San Francisco Jujuy"
-        description="¿Tenés un hospedaje en San Francisco, Valle Grande? Sumalo gratis al directorio turístico y llegá a más turistas."
+        description="¿Tenés un hospedaje en San Francisco, Valle Grande? Sumalo al directorio turístico y llegá a más turistas."
       />
 
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
@@ -74,7 +84,7 @@ export default function ContactoPage() {
           </h1>
           <p className="text-arena/70 text-lg max-w-xl mx-auto mb-10">
             Llegá a más turistas que visitan San Francisco, Valle Grande.
-            Es gratis y se configura en menos de 48 horas.
+            Es facil y se configura en menos de 48 horas.
           </p>
           <a
             href={WA_URL}
@@ -104,7 +114,7 @@ export default function ContactoPage() {
         <p className="text-tierra-400 text-center mb-10">
           Beneficios de estar en el directorio
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {BENEFICIOS.map((b, i) => (
             <div key={i}
               className="bg-white border border-arena-dark rounded-2xl p-6

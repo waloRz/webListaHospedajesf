@@ -58,7 +58,7 @@ export default function ContactoPage() {
     <>
       <SEOHead
         title="Sumar mi hospedaje — Hospedajes en San Francisco Jujuy"
-        description="¿Tenés un hospedaje en San Francisco, Valle Grande? Sumalo al directorio turístico y llegá a más turistas."
+        description="¿Tenés un hospedaje en San Francisco, Valle Grande? Sumalo gratis al directorio turístico y llegá a más turistas."
       />
 
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
@@ -84,7 +84,7 @@ export default function ContactoPage() {
           </h1>
           <p className="text-arena/70 text-lg max-w-xl mx-auto mb-10">
             Llegá a más turistas que visitan San Francisco, Valle Grande.
-            Es facil y se configura en menos de 48 horas.
+            Es gratis y se configura en menos de 48 horas.
           </p>
           <a
             href={WA_URL}
@@ -182,6 +182,26 @@ export default function ContactoPage() {
           ))}
         </div>
       </section>
+
+      {/* ── DECLARACIÓN DE RESPONSABILIDAD ─────────────────────────────── */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+        <div className="bg-arena border border-arena-dark rounded-2xl px-6 py-5
+                        flex items-start gap-4">
+          <span className="text-2xl shrink-0">📋</span>
+          <div>
+            <p className="text-sm font-semibold text-noche mb-1">
+              Compromiso de información veraz
+            </p>
+            <p className="text-sm text-tierra-400 leading-relaxed">
+              Al registrar tu hospedaje en el directorio, declarás que toda la información
+              proporcionada (fotos, precios, servicios y datos de contacto) es verdadera
+              y actualizada. Sos responsable de mantenerla al día y de notificarnos
+              cualquier cambio. Nos reservamos el derecho de dar de baja cualquier
+              hospedaje con información falsa o engañosa.
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* ── CTA FINAL ─────────────────────────────────────────────────────── */}
       <section className="bg-noche py-16 mb-0">
