@@ -58,7 +58,7 @@ export default function ContactoPage() {
     <>
       <SEOHead
         title="Sumar mi hospedaje — Hospedajes en San Francisco Jujuy"
-        description="¿Tenés un hospedaje en San Francisco, Valle Grande? Sumalo gratis al directorio turístico y llegá a más turistas."
+        description="¿Tenés un hospedaje en San Francisco, Valle Grande? Sumalo al directorio turístico y llegá a más turistas."
       />
 
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
@@ -84,7 +84,7 @@ export default function ContactoPage() {
           </h1>
           <p className="text-arena/70 text-lg max-w-xl mx-auto mb-10">
             Llegá a más turistas que visitan San Francisco, Valle Grande.
-            Es gratis y se configura en menos de 48 horas.
+            Es facil y se configura en menos de 48 horas.
           </p>
           <a
             href={WA_URL}
