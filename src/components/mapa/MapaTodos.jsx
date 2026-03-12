@@ -24,8 +24,9 @@ import { Crosshair, AlertTriangle } from 'lucide-react'
 import { CATEGORIAS }    from '../../utils/serviciosConfig'
 
 // Centro de San Francisco, Jujuy
-const SF_CENTER = [-23.621969, -64.949715]  // Centro San Francisco, Valle Grande
-const ZOOM_TODOS = 14.5                        // Decimal posible con zoomSnap: 0.5
+const SF_CENTER = [-23.621110, -64.947380]  // Centro San Francisco, Valle Grande
+
+const ZOOM_TODOS = 17.5                        // Decimal posible con zoomSnap: 0.5
 
 // Color de pin por categoría
 const COLOR_CATEGORIA = {

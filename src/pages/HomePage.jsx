@@ -61,22 +61,23 @@ export default function HomePage() {
             <span className="text-barro-400">San Francisco</span>
           </h1>
           <p className="text-arena/60 text-lg mb-10 max-w-md mx-auto">
-            Encontrá el hospedaje ideal entre la selva y las montañas jujeñas
+            Encontrá el hospedaje ideal entre la selva, nubes y las montañas jujeñas
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/hospedajes"
+              className="bg-white/10 hover:bg-white/20 text-arena border border-white/20
+                         font-semibold px-8 py-3.5 rounded-btn flex items-center gap-2
+                         transition-colors duration-200 justify-center"
+              >
+              <Search size={18} /> Ver todos los hospedajes
+            </Link>
+            <Link to="/mapa"
               className="text-white font-semibold text-base px-8 py-3.5 rounded-btn
                          flex items-center gap-2 justify-center
                          transition-colors duration-200"
               style={{ backgroundColor: 'rgb(121 163 179)' }}
               onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgb(100 145 162)'}
               onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgb(121 163 179)'}>
-              <Search size={18} /> Ver todos los hospedajes
-            </Link>
-            <Link to="/mapa"
-              className="bg-white/10 hover:bg-white/20 text-arena border border-white/20
-                         font-semibold px-8 py-3.5 rounded-btn flex items-center gap-2
-                         transition-colors duration-200 justify-center">
               <MapPin size={18} /> Ver en el mapa
             </Link>
           </div>
