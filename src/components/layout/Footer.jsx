@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-3">
               <Mountain size={22} className="text-barro-400" />
               <span className="font-display text-lg text-arena">
-                Hospedajes <span className="text-barro-400">San Francisco</span>
+                Hospedajes en <span className="text-barro-400">San Francisco</span>
               </span>
             </div>
             <p className="text-sm leading-relaxed">
@@ -20,7 +20,7 @@ export default function Footer() {
           <div>
             <h4 className="text-arena font-semibold text-sm uppercase tracking-wider mb-4">Explorar</h4>
             <nav className="flex flex-col gap-2">
-              {[{ to: '/', label: 'Inicio' }, { to: '/hospedajes', label: 'Ver todos los hospedajes' }, { to: '/mapa', label: 'Mapa de la zona' }].map(({ to, label }) => (
+              {[{ to: '/', label: 'Inicio' }, { to: '/hospedajes', label: 'Ver todos los hospedajes' }, { to: '/mapa', label: 'Mapa de la zona' }, { to: '/contacto', label: 'Sumar mi hospedaje' }].map(({ to, label }) => (
                 <Link key={to} to={to} className="text-sm hover:text-barro-400 transition-colors">{label}</Link>
               ))}
             </nav>
