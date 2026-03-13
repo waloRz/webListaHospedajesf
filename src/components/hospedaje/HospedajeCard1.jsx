@@ -34,10 +34,10 @@ import { Link } from 'react-router-dom'
 import {
   Wifi, Car, Coffee, PawPrint, Flame, Utensils,
   Waves, Snowflake, Compass, ShowerHead, MapPin,
-  Phone, ArrowRight, Star, Beef, Thermometer, MessageCircle,
+  Phone, ArrowRight, Star, Beef, Thermometer,
 } from 'lucide-react'
 import { SERVICIOS, CATEGORIAS } from '../../utils/serviciosConfig'
-import { formatPrecio, whatsappUrl } from '../../utils/formatters'
+import { formatPrecio }          from '../../utils/formatters'
 
 // ─── 1. MAPA ÍCONO LUCIDE por clave de servicio ────────────────────────────
 //  Usamos lucide-react en lugar de emojis para consistencia visual.
@@ -87,7 +87,6 @@ export default function HospedajeCard({ hospedaje, variant = 'default' }) {
     categoria,
     descripcion_corta,
     telefono,
-    whatsapp,
     direccion,
     servicios    = [],
     imagen_portada,
@@ -102,7 +101,6 @@ export default function HospedajeCard({ hospedaje, variant = 'default' }) {
   const gradiente        = GRADIENTES_PLACEHOLDER[categoriaArray[0]] ?? 'from-yunga-700 to-tierra-600'
   const emojiPH          = EMOJIS_PLACEHOLDER[categoriaArray[0]]     ?? '🏡'
   const precioFormateado = formatPrecio(precio_desde, moneda)
-  const waUrl            = whatsapp ? whatsappUrl(whatsapp, nombre) : null
   const serviciosShow    = servicios.slice(0, 4)   // Máximo 4 tags visibles
   const serviciosExtra   = servicios.length - 4    // Cantidad de extras para badge "+N"
 
@@ -299,35 +297,17 @@ export default function HospedajeCard({ hospedaje, variant = 'default' }) {
               El número se limpia de espacios/guiones para el atributo href.
               En mobile (<sm) muestra "Llamar" en lugar del número completo.
           ── */}
-          {/* Llamada + WhatsApp */}
-          <div className="flex items-center gap-2 shrink-0">
-            <a
-              href={`tel:${telefono.replace(/[\s\-()+]/g, '')}`}
-              className="flex items-center gap-1 text-xs text-tierra-500
-                         hover:text-tierra-700 transition-colors duration-150"
-              aria-label={`Llamar a ${nombre}`}
-              onClick={e => e.stopPropagation()}
-            >
-              <Phone size={13} className="text-barro-400 shrink-0" strokeWidth={2} />
-              <span className="hidden sm:inline truncate max-w-[100px]">{telefono}</span>
-              <span className="sm:hidden font-medium">Llamar</span>
-            </a>
-            {waUrl && (
-              <a
-                href={waUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-xs font-medium
-                           text-[#25D366] hover:text-[#1fb855]
-                           transition-colors duration-150"
-                aria-label={`WhatsApp de ${nombre}`}
-                onClick={e => e.stopPropagation()}
-              >
-                <MessageCircle size={13} strokeWidth={2} className="shrink-0" />
-                <span>WhatsApp</span>
-              </a>
-            )}
-          </div>
+          <a
+            href={`tel:${telefono.replace(/[\s\-()+]/g, '')}`}
+            className="flex items-center gap-1.5 text-xs text-tierra-500
+                       hover:text-tierra-700 transition-colors duration-150 shrink-0"
+            aria-label={`Llamar a ${nombre}`}
+            onClick={e => e.stopPropagation()}
+          >
+            <Phone size={13} className="text-barro-400 shrink-0" strokeWidth={2} />
+            <span className="hidden sm:inline truncate max-w-[130px]">{telefono}</span>
+            <span className="sm:hidden font-medium">Llamar</span>
+          </a>
 
           {/* ── C.2 BOTÓN VER DETALLE ─────────────────────────────────────
               Link de React Router → navega a /hospedaje/:id
