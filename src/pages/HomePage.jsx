@@ -37,14 +37,34 @@ export default function HomePage() {
       {/* ── HERO ────────────────────────────────────────────────────── */}
       <section className="relative min-h-[560px] flex items-center justify-center overflow-hidden bg-yunga-900">
 
-        {/* FOTO DE FONDO — poné tu foto en /public/img/hero.jpg */}
-        <img
-          src="/img/hero.webp"
-          alt="Paisaje de San Francisco, Valle Grande, Jujuy"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          loading="eager"
-          onError={e => { e.currentTarget.style.display = 'none' }}
-        />
+        {/* FOTO DE FONDO — art direction: imagen diferente según dispositivo
+            mobile  (< 768px) → /public/img/herom.webp  (ej: 768x1024px  portrait)
+            desktop (≥ 768px) → /public/img/herod.webp  (ej: 1920x1080px landscape)
+            Usamos <picture> para que el navegador elija sin JavaScript.
+            Si alguna no carga, el fallback es bg-yunga-900 del section padre.
+        */}
+        <picture style={{position:'absolute',inset:0,width:'100%',height:'100%'}}>
+          {/* Mobile: imagen vertical, más liviana */}
+          <source
+            media="(max-width: 767px)"
+            srcSet="/img/herom.webp"
+            type="image/webp"
+          />
+          {/* Desktop: imagen horizontal, mayor resolución */}
+          <source
+            media="(min-width: 768px)"
+            srcSet="/img/herod.webp"
+            type="image/webp"
+          />
+          {/* Fallback JPG — object-position top para mostrar desde arriba sin zoom */}
+          <img
+            src="/img/herod.jpg"
+            alt="Paisaje de San Francisco, Valle Grande, Jujuy"
+            style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',objectPosition:'center 30%'}}
+            loading="eager"
+            onError={e => { e.currentTarget.style.display = 'none' }}
+          />
+        </picture>
 
         {/* OVERLAY VERDE YUNGA — capa 1: tono verde uniforme al 65% */}
         <div className="absolute inset-0 bg-yunga-900/65" />
@@ -61,14 +81,13 @@ export default function HomePage() {
             <span className="text-barro-400">San Francisco</span>
           </h1>
           <p className="text-arena/60 text-lg mb-10 max-w-md mx-auto">
-            Encontrá el hospedaje ideal entre la selva, nubes y las montañas jujeñas
+            Encontrá el hospedaje ideal entre la selva y las montañas jujeñas
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/hospedajes"
               className="bg-white/10 hover:bg-white/20 text-arena border border-white/20
-                         font-semibold px-8 py-3.5 rounded-btn flex items-center gap-2
-                         transition-colors duration-200 justify-center"
-              >
+                         font-semibold text-base px-8 py-3.5 rounded-btn flex items-center gap-2
+                         transition-colors duration-200 justify-center">
               <Search size={18} /> Ver todos los hospedajes
             </Link>
             <Link to="/mapa"

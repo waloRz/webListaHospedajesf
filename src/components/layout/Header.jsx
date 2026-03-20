@@ -374,7 +374,7 @@ export default function Header({ transparente = false }) {
           >
             <Mountain size={22} strokeWidth={1.5} className="text-noche" />
             <span className="font-display text-sm text-white">
-              Hospedajes en <span className="text-noche">SF</span>
+              Hospedajes en <span className="text-white">Las Yungas</span>
             </span>
           </Link>
 
