@@ -11,6 +11,8 @@ export const SERVICIOS = {
   quincho:           { emoji: '🔥', label: 'Quincho' },
   cama_matrimonial:  { emoji: '🛏️', label: 'Cama matrimonial' },
   ventilador:        { emoji: '💨', label: 'Ventilador' },
+  seguro_huesped:    { emoji: '🛡️', label: 'Seguro para el huésped' },
+  camaras:           { emoji: '📷', label: 'Cámaras de seguridad' },
 }
 
 export const CATEGORIAS = {

@@ -33,17 +33,6 @@ export function useHospedajes() {
     })
   }, [filtros])
 
-  // Mezcla los resultados filtrados en orden aleatorio
-  // Se recalcula cada vez que cambian los filtros
-  const hospedajesFiltradosAleatorios = useMemo(() => {
-    const arr = [...hospedajesFiltrados]
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[arr[i], arr[j]] = [arr[j], arr[i]]
-    }
-    return arr
-  }, [hospedajesFiltrados])
-
   // Mezcla aleatoria (Fisher-Yates), toma los primeros 4
   // Sin dependencias: orden nuevo en cada visita a la página
   const aleatorios = useMemo(() => {
@@ -99,7 +88,6 @@ export function useHospedajes() {
   return {
     hospedajes:           ACTIVOS,
     hospedajesFiltrados,
-    hospedajesFiltradosAleatorios,
     destacados:           ACTIVOS.filter(h => h.destacado),
     aleatorios,
     totalActivos:         ACTIVOS.length,

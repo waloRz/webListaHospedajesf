@@ -45,7 +45,7 @@ import { Link, useParams } from 'react-router-dom'
 import {
   ArrowLeft, MapPin, Phone, MessageCircle, Navigation,
   Wifi, Car, Coffee, PawPrint, Flame,
-  Utensils, ShowerHead, Thermometer, Bed, Wind, CheckCircle2,
+  Utensils, ShowerHead, Thermometer, Bed, Wind, Shield, Camera, CheckCircle2,
 } from 'lucide-react'
 import { useHospedajes }                            from '../hooks/useHospedajes'
 import { SERVICIOS, CATEGORIAS } from '../utils/serviciosConfig'
@@ -70,6 +70,8 @@ const ICONOS_SERVICIO = {
   quincho:          <Flame       size={18} strokeWidth={2} />,
   cama_matrimonial: <Bed         size={18} strokeWidth={2} />,
   ventilador:       <Wind        size={18} strokeWidth={2} />,
+  seguro_huesped:   <Shield      size={18} strokeWidth={2} />,
+  camaras:          <Camera      size={18} strokeWidth={2} />,
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

@@ -25,7 +25,9 @@
       "desayuno",
       "banos_privados",
       "calefaccion",
-      "ventilador"
+      "ventilador",
+      "seguro_huesped",
+      "camaras"
     ],
     "categorias_turismo": [
       "naturaleza",

@@ -29,7 +29,6 @@ export default function HospedajesPage() {
   // Hook central: filtros + lista filtrada + helpers
   const {
     hospedajesFiltrados,
-    hospedajesFiltradosAleatorios,
     filtros,
     toggleFiltro,
     setBusqueda,
@@ -172,7 +171,7 @@ export default function HospedajesPage() {
           ) : (
             /* ── Grid de cards ── */
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {hospedajesFiltradosAleatorios.map(h => (
+              {hospedajesFiltrados.map(h => (
                 <HospedajeCard
                   key={h.id}
                   hospedaje={h}
