@@ -43,7 +43,7 @@ import { googleMapsUrl } from '../../utils/formatters'
 
 // Coordenadas del centro de San Francisco, Jujuy
 const SF_CENTER = { lat: -23.621969, lng: -64.949715 }  // Centro San Francisco, Valle Grande
-const ZOOM_DEFAULT = 19.5                                    // Decimal posible con zoomSnap: 0.5
+const ZOOM_DEFAULT = 16.5                                    // Decimal posible con zoomSnap: 0.5
 
 export default function MapaHospedaje({
   hospedaje,
@@ -124,14 +124,14 @@ export default function MapaHospedaje({
             </defs>
             <!-- Cuerpo del pin -->
             <path d="M16 2C9.4 2 4 7.4 4 14c0 9 12 26 12 26S28 23 28 14C28 7.4 22.6 2 16 2z"
-                  fill="#8B5E3C" filter="url(#sombra)"/>
+                  fill="#f71100" filter="url(#sombra)"/>
             <!-- Borde más claro -->
             <path d="M16 3.5C10.2 3.5 5.5 8.2 5.5 14c0 8.5 10.5 23.5 10.5 23.5S26.5 22.5 26.5 14C26.5 8.2 21.8 3.5 16 3.5z"
                   fill="#C4956A" opacity="0.3"/>
             <!-- Círculo interior blanco -->
             <circle cx="16" cy="14" r="5.5" fill="white" opacity="0.95"/>
             <!-- Punto interior tierra -->
-            <circle cx="16" cy="14" r="3" fill="#8B5E3C"/>
+            <circle cx="16" cy="14" r="3" fill="#f71100"/>
           </svg>`
 
         const iconoPersonalizado = L.divIcon({
