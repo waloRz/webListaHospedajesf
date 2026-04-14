@@ -103,23 +103,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── STATS ───────────────────────────────────────────────────── */}
-      <div className="bg-noche">
-        <div className="max-w-4xl mx-auto px-4 py-6 flex flex-wrap justify-center gap-12">
-          {[
-            { num: totalActivos, label: 'Hospedajes' },
-            { num: Object.keys(CATEGORIAS).length, label: 'Categorías' },
-            { num: '100%', label: 'Gratuito' },
-            { num: '1', label: 'Destino único' },
-          ].map(({ num, label }) => (
-            <div key={label} className="text-center">
-              <div className="font-display text-3xl text-barro-400 font-bold">{num}</div>
-              <div className="text-arena/40 text-xs uppercase tracking-widest mt-1">{label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+{/* ── STATS ───────────────────────────────────────────────────── */}
+<div className="relative overflow-hidden">
 
+  {/* Imagen de fondo */}
+  <img
+    src="/img/termas.webp"
+    alt=""
+    aria-hidden="true"
+    className="absolute inset-0 w-full h-full object-cover object-center"
+  />
+
+  {/* Overlay oscuro para que los números se lean bien */}
+  <div className="absolute inset-0 bg-noche/75" />
+
+  {/* Contenido */}
+  <div className="relative z-10 max-w-4xl mx-auto px-4 py-6 flex flex-wrap justify-center gap-12">
+    {[
+      { num: totalActivos, label: 'Hospedajes' },
+      { num: Object.keys(CATEGORIAS).length, label: 'Categorías' },
+      { num: '100%', label: 'Gratuito' },
+      { num: '1', label: 'Destino único' },
+    ].map(({ num, label }) => (
+      <div key={label} className="text-center">
+        <div className="font-display text-3xl text-barro-400 font-bold">{num}</div>
+        <div className="text-arena/40 text-xs uppercase tracking-widest mt-1">{label}</div>
+      </div>
+    ))}
+  </div>
+
+</div>
       {/* ── DESTACADOS ──────────────────────────────────────────────── */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex items-baseline justify-between mb-8">
