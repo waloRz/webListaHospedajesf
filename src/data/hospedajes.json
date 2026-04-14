@@ -20,7 +20,7 @@
     "servicios": [
        "wifi",
       "cama_matrimonial",
-      "agua caliente",
+      "agua_caliente",
       "estacionamiento",
       "desayuno",
       "banos_privados",
@@ -79,7 +79,7 @@
     "imagenes": [
      
     ],
-    "imagen_portada": "/img/002/portada.jpg",
+    "imagen_portada": "/img/002/portada.webp",
     "activo": true,
     "destacado": true
   },
